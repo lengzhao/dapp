@@ -13,7 +13,7 @@
    3. build and start
 2. start local server
    1. go build server/server.go
-   2. ./server.go
+   2. ./server.exe
 3. run app
    1. cd 1.hello
    2. go test
