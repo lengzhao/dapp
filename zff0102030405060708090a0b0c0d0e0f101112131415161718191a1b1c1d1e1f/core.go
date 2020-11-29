@@ -737,3 +737,8 @@ func SetAppAccountForTest(in interface{}, value uint64) {
 	}
 	adminTransfer(Address{}, info.Account, value)
 }
+
+// SetStatForTest set status of test
+func SetStatForTest(index byte, data []byte) {
+	gBS.DbSet(dbStat{}, []byte{index}, data, maxDbLife)
+}

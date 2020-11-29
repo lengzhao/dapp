@@ -21,6 +21,7 @@ func main() {
 	flag.StringVar(&address, "addr", "127.0.0.1:17778", "listen address")
 	flag.StringVar(&dbServer, "db_server", "127.0.0.1:17777", "address of db server")
 
+	flag.Parse()
 	db := server.NewRPCObj(".")
 	server.RegisterAPI(db, func(dir string, id uint64) server.DBApi {
 		return NewProxy(id, addrType, dbServer)
